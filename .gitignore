@@ -1,1 +1,5 @@
 .idea
+
+out_*.txt
+measurements/*
+!measurements/1k-sample.txt

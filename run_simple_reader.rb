@@ -2,4 +2,6 @@
 
 require_relative 'lib/simple_reader'
 
-SimpleReader.new('measurements/1k-sample.txt').calculate
+File.open('out_simple.txt', 'w') do |file|
+  SimpleReader.new('measurements/1k-sample.txt', file).calculate
+end

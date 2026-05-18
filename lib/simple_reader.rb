@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class SimpleReader
-  def initialize(file)
+  def initialize(file, out = $stdout)
     @file = file
+    @out = out
   end
 
   def calculate
@@ -15,12 +16,13 @@ class SimpleReader
 
     # for each city in alphabetical order, write the min, mean and max
     @values_per_city.sort_by { |key, _| key }.each do |city, values|
-      puts [
+      @out << ([
         city,
         values.min,
-        values.sum / values.length,
+        (values.sum / values.length).round(1),
         values.max,
-      ].join ';'
+      ].join ';')
+      @out << "\n"
     end
   end
 end
