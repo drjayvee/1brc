@@ -5,6 +5,9 @@ AllCops:
 Style/Documentation:
   Enabled: false
 
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
@@ -19,3 +22,6 @@ Layout/LineLength:
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
+
+Metrics:
+  Enabled: false
